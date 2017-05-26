@@ -1,0 +1,25 @@
+{
+  "name": "eatbetter",
+  "version": "1.0.0",
+  "description": "app that suggests menu items at restaurants",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rhoadsjustin/project1.git"
+  },
+  "keywords": [
+    "food",
+    "eating",
+    "smart"
+  ],
+  "author": "Where's Kendall",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rhoadsjustin/project1/issues"
+  },
+  "homepage": "https://github.com/rhoadsjustin/project1#readme"
+}
