@@ -1,19 +1,19 @@
+console.log("this is working");
+
 $( document ).ready(function() {
   $('form').on('submit', function(e){
     var searchRequest = $('form').serialize();
     e.preventDefault();
     $.ajax({
       method: "GET",
-      url: "http://localhost:3000/yelpapi/"+searchRequest
+      url: "http://localhost:3000/yelpapi/"+searchRequest,
       success: onSuccess,
       error: onError
     });
-
-
-  })
+  });
 
   function onSuccess(json){
-    var results = json.jsonBody.businesses
+    var results = json.jsonBody.businesses;
     for (var i = 0; i < 15; i++) {
       var template = `<div class="col-md-6 thumbnail">
         <div class="card mb-3">
@@ -25,9 +25,11 @@ $( document ).ready(function() {
           </div>
         </div>
     </div>`;
+    $('#results').append(template);
   }
-}
+};
 
   function onError(){
     console.log("error");
-  }
+  };
+});

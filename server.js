@@ -44,7 +44,7 @@ app.get('/yelpapi/:term', function searchYelp(req,res){
     client.search(searchRequest).then(response => {
       var results = response.jsonBody.businesses;
       //const prettyJson = JSON.stringify(firstResult, null, 4);
-      res.json(results);
+      res.render('index', {results: results});
     });
   }).catch(e => {
     console.log(e);
