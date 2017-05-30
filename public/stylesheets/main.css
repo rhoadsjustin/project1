@@ -1,0 +1,30 @@
+/*container, col-md-3 {
+  max-width: 50px;
+  max-height: 50px;
+}*/
+img {
+  max-width: 100%;
+  max-height: auto;
+}
+
+#results {
+  position: relative;
+  /*right: 50px;*/
+  left: 255px;
+}
+
+#searchBar {
+  position: relative;
+  left: 375px;
+  display: inline-flex;
+}
+
+.logBtns {
+  position: relative;
+  top: 8px;
+}
+
+footer {
+  position: relative;
+  left: 550px;
+}
