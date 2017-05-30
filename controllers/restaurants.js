@@ -3,8 +3,6 @@ function searchYelp(req,res){
 
   // Place holders for Yelp Fusion's OAuth 2.0 credentials. Grab them
   // from https://www.yelp.com/developers/v3/manage_app
-  var clientId = 'bsZrpQQdMBHHfBqySyuHrA';
-  var clientSecret = 'OhHerybhik55wIEnFq7vjdJWAYfdOc4JoNCTHAfzAORoGGNlb8aBb9sJIM9UxMQt';
 
 
   yelp.accessToken(clientId, clientSecret).then(response => {

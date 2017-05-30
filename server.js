@@ -12,6 +12,13 @@ var methodOverride = require('method-override');
 
 mongoose.connect('mongodb://localhost:27017/candies-app');
 
+// Configuring Passport
+var passport = require('passport');
+var expressSession = require('express-session');
+app.use(expressSession({secret: 'astarterwordtohelpcreatearandomandconsistentencryptionforallsessions'}));
+app.use(passport.initialize());
+app.use(passport.session());
+
 
 // Setup middleware
 app.use(morgan('dev'));
@@ -76,6 +83,8 @@ app.get('/yelpapi/:term', function searchYelp(req,res){
 
 var routes = require('./config/routes');
 
-//app.use(routes);
+app.use(routes);
 
-app.listen(3000);
+app.listen(3000, function(){
+  console.log("Server 3000 listening");
+});
