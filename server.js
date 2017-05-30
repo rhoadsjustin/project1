@@ -24,7 +24,8 @@ app.set('view engine', 'ejs');
 app.use(express.static(__dirname + '/public'));
 
 // Setting up the Passport Strategies
-// require("./config/passport")(passport)
+require("./config/passport")(passport)
+
 app.get('/yelpapi/:term', function searchYelp(req,res){
   var yelp = require('yelp-fusion');
 
@@ -53,6 +54,8 @@ app.get('/yelpapi/:term', function searchYelp(req,res){
 
 var routes = require('./config/routes');
 
-//app.use(routes);
+app.use(routes);
 
-app.listen(3000);
+app.listen(3000, function(){
+  console.log('server 3000 is on!');
+});
