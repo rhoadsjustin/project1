@@ -34,32 +34,6 @@ app.use(express.static(__dirname + '/public'));
 
 // Routes
 
-app.get('/yelpapi/:term', function searchYelp(req,res){
-  var yelp = require('yelp-fusion');
-
-  // Place holders for Yelp Fusion's OAuth 2.0 credentials. Grab them
-  // from https://www.yelp.com/developers/v3/manage_app
-  var clientId = 'bsZrpQQdMBHHfBqySyuHrA';
-  var clientSecret = 'OhHerybhik55wIEnFq7vjdJWAYfdOc4JoNCTHAfzAORoGGNlb8aBb9sJIM9UxMQt';
-
-
-  yelp.accessToken(clientId, clientSecret).then(response => {
-    var searchRequest = {
-      term: req.params.term,
-      location: 'austin, tx'
-    };
-    var client = yelp.client(response.jsonBody.access_token);
-
-    client.search(searchRequest).then(response => {
-      var results = response.jsonBody.businesses;
-      //const prettyJson = JSON.stringify(firstResult, null, 4);
-      res.render('index', {results: results});
-    });
-  }).catch(e => {
-    console.log(e);
-  });
-})
-
 require("./config/passport")(passport)
 var routes = require('./config/routes');
 
