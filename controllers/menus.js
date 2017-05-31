@@ -4,8 +4,7 @@ var Menu = require('../models/Menu');
 function createMenu(req, res) {
   var menu = new Menu();
 
-  menu.name = req.body.name;
-  menu.items = req.body.items;
+  menu.name = req.body.name,
 
   menu.save(function(error){
     if(error) res.json({message: 'Could not create menu:' + error});
