@@ -6,20 +6,20 @@ var expressSession = require('express-session');
 function searchYelp(req,res){
   var yelp = require('yelp-fusion');
   var db = require('../models');
-
+  console.log(req.query.q);
 
   var clientId = process.env.YELP_CLIENT_ID;
   var clientSecret = process.env.YELP_CLIENT_SECRET;
 
 
   var searchRequest = {
-    term: req.params.term,
+    term: req.query.q,
     location: 'austin, tx'
   };
 
   // check your db for the term here
   db.Restaurant.find({term: searchRequest.term}, function(err, success){
-    console.log(success);
+    //console.log(success);
     if(success.length === 0) {
       console.log(`\nDIDN'T FIND ANY ${searchRequest.term}s IN OUR DB\n`);
       yelp.accessToken(clientId, clientSecret).then(response => {
@@ -29,28 +29,39 @@ function searchYelp(req,res){
         client.search(searchRequest).then(response => {
           var results = response.jsonBody.businesses;
           //const prettyJson = JSON.stringify(firstResult, null, 4);
-          results.forEach( function(result){
-            result.term = searchRequest.term;
-            // createMenu();
-            // since it wasn't in the db, add all the api results in results to your db here
-            db.Restaurant.create(results, function(err, succ){
 
-              console.log(succ[0]);
-              console.log("\n ADDED TO DB THE SEARCH TERM: " , searchRequest.term);
-              res.render('results', {results: succ, user: req.user});
-            })
-          })
+            db.Restaurant.create(results, function(err, madeRests){
+              madeRests.forEach( function(result, index){
+                result.term = searchRequest.term;
+                result.save(function(err, succ){
+                  if(index === madeRests.length - 1){
+                    console.log("\n ADDED TO DB THE SEARCH TERM: " , searchRequest.term);
+                    db.Restaurant.find({term: searchRequest.term}, function(err, succ){
+                      res.render('results', {results: succ, user: req.user});
+                    });
+                  }
+                });
+
+              })
+
+
+              //res.render('results', {result: succ, user: req.user});
+            });
 
         });
       }).catch(e => {
         console.log(e);
+        res.send("Sad!");
       });
     } else {
       console.log(`\n WE HAVE WHOLE BUNCH OF ${searchRequest.term}s IN OUR DB\n`);
-
       res.render('results', {results: success, user: req.user});
     }
-  })
+    // db.Restaurant.find({term: searchRequest.term}, function(err, success){
+    //     if(err){return console.log(err);}
+    //     res.render('results', {results: success, user: req.user});
+    // });
+  });
 }
 
 

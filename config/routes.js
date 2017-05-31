@@ -15,7 +15,7 @@ var isAuthenticated = function (req, res, next) {
   res.redirect('/');
 }
 
-router.route('/:term')
+router.route('/search')
 
   .get(restaurantsController.searchYelp);
 
