@@ -1,25 +1,28 @@
 'use strict';
 
-const yelp = require('yelp-fusion');
 
-// Place holders for Yelp Fusion's OAuth 2.0 credentials. Grab them
-// from https://www.yelp.com/developers/v3/manage_app
-const clientId = 'bsZrpQQdMBHHfBqySyuHrA';
-const clientSecret = 'OhHerybhik55wIEnFq7vjdJWAYfdOc4JoNCTHAfzAORoGGNlb8aBb9sJIM9UxMQt';
+yelpPull(req, res) => {
+  var yelp = require('yelp-fusion');
 
-const searchRequest = {
-  term:'tacos',
-  location: 'austin, tx'
-};
+  // Place holders for Yelp Fusion's OAuth 2.0 credentials. Grab them
+  // from https://www.yelp.com/developers/v3/manage_app
+  var clientId = ;
+  var clientSecret = ;
 
-yelp.accessToken(clientId, clientSecret).then(response => {
-  const client = yelp.client(response.jsonBody.access_token);
+  var searchRequest = {
+    term: req.body.term,
+    location: 'austin, tx'
+  };
 
-  client.search(searchRequest).then(response => {
-    const firstResult = response.jsonBody.businesses[0];
-    const prettyJson = JSON.stringify(firstResult, null, 4);
-    console.log(prettyJson);
+  yelp.accessToken(clientId, clientSecret).then(response => {
+    var client = yelp.client(response.jsonBody.access_token);
+
+    client.search(searchRequest).then(response => {
+      var firstResult = response.jsonBody.businesses[i];
+      var prettyJson = JSON.stringify(firstResult, null, 4);
+      console.log(prettyJson);
+    });
+  }).catch(e => {
+    console.log(e);
   });
-}).catch(e => {
-  console.log(e);
-});
+}

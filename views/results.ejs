@@ -1,0 +1,12 @@
+<% for (var i = 0; i < 15; i++) { %>
+  <div class="col-md-6 thumbnail" id=<%= results[i].id%> >
+    <div class="card mb-3">
+      <img class="card-img-top" src=<%= results[i].image_url %> alt="Card image cap">
+      <div class="card-block">
+        <h4 class="card-title"> <%= results[i].name %> </h4>
+        <p class="card-text">YELP's Rating: <%= results[i].rating %> </p>
+        <p class="card-text"><small class="text-muted"><a href= <%= results[i].url %> ></a></small></p>
+      </div>
+    </div>
+  </div>
+<% } %>
