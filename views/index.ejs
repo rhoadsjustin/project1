@@ -19,7 +19,7 @@
       crossorigin="anonymous">
     </script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <script src="../public/scripts/app.js"></script>
+    <script src="../scripts/app.js"></script>
     <!-- link to custom javascript file (always require after external JS libraries) -->
     <!--<script type="text/javascript" src="js/app.js"></script>-->
 
@@ -65,14 +65,14 @@
         <center><p class="tagline">“Write, review and share the menu.”</p></center>
       </div>
       <div class="col-md-3 loginSignupCol">
+        <center class="loginSignup">
         <% if(user){ %>
           Hello <%= user.fb.firstName %>
-          <a class="btn" href="/logout">Logout</a>
+          <a class="btn btn-default logout" href="/logout" role="button">Logout</a>
         <% } else {  %>
-          <a class="btn" href="/login/facebook">Login with Facebook</a>
+          <a class="btn btn-default signup" href="/login/facebook" role="button">Login with Facebook</a>
         <% } %>
-        <center class="loginSignup"><input type="button" class="login" value="Login" href="/login/facebook">
-        <input type="button"  class="signup"  value=" Signup "  onclick="document.form.action='http://example.com/registrationPage.php'; document.form.submit();"></center>
+        <!-- <input type="button"  class="signup"  value=" Signup "  onclick="document.form.action='http://example.com/registrationPage.php'; document.form.submit();"></center> -->
       </div>
     <!--closes headerRow-->
     </div>
