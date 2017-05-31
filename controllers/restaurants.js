@@ -26,7 +26,7 @@ function searchYelp(req,res){
           //const prettyJson = JSON.stringify(firstResult, null, 4);
           results.forEach( function(result){
             result.term = searchRequest.term;
-            //console.log(results);
+            createMenu();
             // since it wasn't in the db, add all the api results in results to your db here
             db.Restaurant.create(results, function(err, succ){
 
@@ -48,29 +48,6 @@ function searchYelp(req,res){
   })
 }
 
-//
-// function foursquareSearch(req,res){
-//         var options = {
-//           url: 'https://api.foursquare.com/v2/venues/search',
-//           headers: {
-//             'query' : results.name,
-//             'CLIENT_ID': fourSquareClientId,
-//             'CLIENT_SECRET' : fourSquareClientSecret
-//           }
-//         };
-//
-//         function fourSquareAPI(error, response, body) {
-//           if (!error && response.statusCode == 200) {
-//             var fourSquareResults = body;
-//
-//           }
-//         }
-//         request(options, fourSquareAPI);
-//
-//         db.Menu.create(fourSquareResults, function(req, res){
-//           res.forEach(db.Item.create())
-//         })
-// }
 
 function changeRestaurantRating (req, res) {
   var restaurantName = req.params.name;

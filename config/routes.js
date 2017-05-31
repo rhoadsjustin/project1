@@ -5,6 +5,7 @@ var express = require('express'),
 
 var restaurantsController = require('../controllers/restaurants.js');
 var usersController   = require('../controllers/users');
+var menusController = require('../controllers/menus');
 
 var isAuthenticated = function (req, res, next) {
   // if user is authenticated in the session, call the next() to call the next request handler
@@ -14,9 +15,16 @@ var isAuthenticated = function (req, res, next) {
   res.redirect('/');
 }
 
-router.route('/yelpapi/:term')
+router.route('/:term')
 
   .get(restaurantsController.searchYelp);
+
+router.route('/restaurants/:name')
+  .get(menusController.getMenu)
+
+  .post(isAuthenticated, menusController.createItem)
+
+  .delete(isAuthenticated, menusController.deleteItem);
 
 router.route('/login/facebook').get( usersController.getLogin);
 router.route('/login/facebook/callback').get(usersController.getCallback);

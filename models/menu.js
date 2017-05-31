@@ -1,10 +1,7 @@
 var mongoose = require('mongoose');
 
 var ItemSchema = mongoose.Schema({
-  name: String,
-  rating: Number,
-  comments: String,
-  photos: String
+  name: String
 })
 
 var MenuSchema = mongoose.Schema({
