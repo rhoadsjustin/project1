@@ -10,7 +10,7 @@ var flash          = require('connect-flash');
 var mongoose = require('mongoose');
 
 
-mongoose.connect('mongodb://localhost:27017/candies-app');
+mongoose.connect('mongodb://localhost:27017/eatbetter');
 
 var passport = require('passport');
 var expressSession = require('express-session');

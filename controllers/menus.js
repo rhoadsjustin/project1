@@ -1,4 +1,4 @@
-var Menu = require('../models/Menu');
+var Menu = require('../models/menu');
 
 // POST new Menu
 function createMenu(req, res) {
