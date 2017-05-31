@@ -1,10 +1,11 @@
-var express = require('express'),
-    router = express.Router(),
-    bodyParser = require('body-parser'), //parses information from POST
-    methodOverride = require('method-override'); //used to manipulate POST
+var express         = require('express'),
+    router          = express.Router(),
+    bodyParser      = require('body-parser'), //parses information from POST
+    methodOverride  = require('method-override'); //used to manipulate POST
 
 var restaurantsController = require('../controllers/restaurants.js');
-var usersController   = require('../controllers/users');
+var usersController       = require('../controllers/users');
+var menusController       = require('../controllers/menus');
 
 var isAuthenticated = function (req, res, next) {
   // if user is authenticated in the session, call the next() to call the next request handler
@@ -17,6 +18,13 @@ var isAuthenticated = function (req, res, next) {
 router.route('/yelpapi/:term')
 
   .get(restaurantsController.searchYelp);
+
+// menu routes
+router.route('/menu')
+
+  .post(isAuthenticated, menusController.createMenu);
+
+
 
 router.route('/login/facebook').get( usersController.getLogin);
 router.route('/login/facebook/callback').get(usersController.getCallback);

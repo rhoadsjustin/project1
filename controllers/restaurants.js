@@ -83,10 +83,6 @@ function changeRestaurantRating (req, res) {
 }
 
 
-
-
-
-
 module.exports = {
   searchYelp: searchYelp
 }
