@@ -1,0 +1,54 @@
+img {
+  max-width: 100%;
+  max-height: auto;
+}
+
+#results {
+  position: relative;
+  left: 255px;
+}
+
+#searchBar {
+  position: relative;
+  left: 375px;
+  display: inline-flex;
+}
+
+.logBtns {
+  position: relative;
+  top: 8px;
+}
+
+footer {
+  position: relative;
+  left: 550px;
+}
+
+.navbar {
+height: 250px;
+}
+
+h1 {
+  color: white;
+  position: relative;
+  bottom: 225px;
+  left: 450px;
+}
+
+h3 {
+  color: white;
+  position: relative;
+  bottom: 225px;
+  left: 320px;
+}
+
+.row {
+  position: relative;
+  bottom: 225px;
+  right: 30px;
+}
+
+.col-sm-6 {
+  position: relative;
+  bottom: 100px;
+}

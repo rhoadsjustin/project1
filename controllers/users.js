@@ -11,14 +11,13 @@ function getCallback(req, res){
   var callback = passport.authenticate('facebook', {
     successRedirect : '/',
     failureRedirect : '/',
-    failureFlash: true
   });
-  return callback(req,res);
+  return callback(req, res);
 }
 
 function logout(req, res) {
   req.logout();
-  res.render('index.ejs');
+  res.redirect('/');
 }
 module.exports = {
   getLogin: getLogin,
