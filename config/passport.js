@@ -15,8 +15,8 @@ module.exports = function(passport){
 
   // facebook authentication
   passport.use('facebook', new FacebookStrategy({
-      clientID        : process.env.FACEBOOK_API_KEY,
-      clientSecret    : process.env.FACEBOOK_API_SECRET,
+      clientID        : process.env.PROJECT1_KEY,
+      clientSecret    : process.env.PROJECT1_SECRET,
       callbackURL     : 'http://localhost:3000/login/facebook/callback',
       enableProof			: true,
       profileFields   : ['name']
