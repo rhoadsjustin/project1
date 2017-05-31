@@ -1,0 +1,14 @@
+<% for (var i = 0; i < 15; i++) { %>
+  <div class="container">
+    <div class="col-sm-6 thumbnail">
+      <div class="card mb-3">
+        <img class="img-fluid card-img-top" src=<%= results[i].image_url %> alt="Card image cap">
+        <div class="card-block">
+          <h4 class="card-title"> <%= results[i].name %> </h4>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <p class="card-text"><small class="text-muted"><a href= <%= results[i].url %></a></small></p>
+        </div>
+      </div>
+    </div>
+  </div>
+<% } %>
