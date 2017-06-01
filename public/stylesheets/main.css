@@ -149,3 +149,128 @@ h4 {
 .card-text {
   color: black;
 }
+
+
+.menuCol {
+  background-color: #FFFFEE;
+  margin-top: 42px;
+  height: 600px;
+  border: 12px solid black;
+  padding: 0;
+}
+
+.menuColTR {
+  padding: 0;
+}
+
+.menuColTL {
+  padding: 0;
+}
+
+.menuColBR {
+  padding: 0;
+}
+
+.menuColBL {
+  padding: 0;
+}
+
+.menuColTR::before,
+.menuColTR::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-color: transparent;
+    border-style: solid;
+}
+
+.menuColTR::before {
+    border-width: 1.5em;
+    border-right-color: #585858;
+    border-top-color: #585858;
+}
+
+.menuColTR::after {
+    border-radius: 0.4em;
+    border-width: 1.35em;
+    border-right-color: #585858;
+    border-top-color: #585858;
+}
+
+.menuColTL::before,
+.menuColTL::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-color: transparent;
+    border-style: solid;
+}
+
+.menuColTL::before {
+    border-width: 1.5em;
+    border-left-color: #585858;
+    border-top-color: #585858;
+}
+
+.menuColTL::after {
+    border-radius: 0.4em;
+    border-width: 1.35em;
+    border-left-color: #585858;
+    border-top-color: #585858;
+}
+
+.menuColBL::before,
+.menuColBL::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-color: transparent;
+    border-style: solid;
+}
+
+.menuColBL::before {
+    border-width: 1.5em;
+    border-left-color: #585858;
+    border-bottom-color: #585858;
+}
+
+.menuColBL::after {
+    border-radius: 0.4em;
+    border-width: 1.35em;
+    border-left-color: #585858;
+    border-bottom-color: #585858;
+}
+
+.menuColBR::before,
+.menuColBR::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border-color: transparent;
+    border-style: solid;
+}
+
+.menuColBR::before {
+    border-width: 1.5em;
+    border-right-color: #585858;
+    border-bottom-color: #585858;
+}
+
+.menuColBR::after {
+    border-radius: 0.4em;
+    border-width: 1.35em;
+    border-right-color: #585858;
+    border-bottom-color: #585858;
+}
+
+.menuTitle {
+  color: black;
+  font-family:'Monotype Corsiva','Apple Chancery','ITC Zapf Chancery','URW Chancery L',cursive;
+  text-align: center;
+  font-size: 60px;
+  margin-top: 10px;
+}
