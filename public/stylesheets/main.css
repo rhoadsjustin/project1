@@ -60,7 +60,7 @@ body {
 	display: block;
   height: 48px;
   border-radius: 10px;
-	width: 100%;
+	width: 120%;
 	word-spacing: 0px;
   margin-top: 110px;
   opacity: 0.9;
@@ -142,6 +142,27 @@ h3 {
   overflow-y: auto;
 }
 
-.card-text {
-  color: black;
+
+.thumbnail {
+  background-color: transparent;
+  opacity: 1;
+  border-style: none;
+}
+
+.card-text, .card-title {
+  color: white;
+  text-align: center;
+}
+
+.card-block {
+  border-style: double;
+  width: 60%;
+}
+
+.searchbarRow {
+  right: 50px;
+}
+
+.toggleButtonsRow {
+  left: 50px;
 }
