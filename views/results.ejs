@@ -21,14 +21,14 @@
   <!-- link to custom javascript file (always require after external JS libraries) -->
   <!--<script type="text/javascript" src="js/app.js"></script>-->
 
-  <title>EpikEats</title>
+  <title>epikEats</title>
 
 </head>
 
 <body>
   <div class="container-fluid">
   <nav class="navbar navbar-default navbar-fixed-top">
-    <a href="/" class="navbar-brand navbar-left home" style="color: white">EpikEats</a>
+    <a href="/" class="navbar-brand navbar-left home" style="color: white">epikEats</a>
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" style="color: black" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
       </button>
@@ -61,7 +61,7 @@
     </div>
   </div>
 </form>
-<!--********************MOST RECENT ROW********************-->
+<!--********************SEARCH RESULTS ROW********************-->
 <div class="row mostRecentRow scroll" style="top: 0px;bottom: 0px;height: 600px; right: 18%;">
       <div class="col-md-8 col-md-offset-4 mostRecentCol">
           <% for (var i = 0; i < 10; i++) { %>
@@ -70,10 +70,10 @@
                 <img class="card-img-top center-block" src= <%= results[i].image_url %> style="width:60%; height:60%;"  alt="Card image cap">
                 <div class="card-block center-block">
                   <h4 class="card-title"> <%= results[i].name %> </h4>
-                  <p class="card-text">YELP's Rating: <%= results[i].rating %> </p>
+                  <p class="card-text">YELP Rating: <%= results[i].rating %> </p>
                   <p class="card-text"><small class="text-muted"><a href= <%= results[i].url %> ></a></small></p>
                   <form action="/restaurant/<%= results[i].id %>" method="GET">
-                    <input type="submit" class="btn btn-primary center-block" value="Menu">
+                    <input type="submit" class="btn btn-primary center-block menuBtn" value="Menu">
                   </form>
                 </div>
               </div>
