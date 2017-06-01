@@ -45,6 +45,12 @@ app.get('/', function home (req, res) {
   res.render('index', { user: req.user });
 });
 
+
 app.listen(3000, function(){
   console.log('server 3000 is on!');
+});
+
+
+app.get('/menu', function menu (req, res) {
+  res.render('menu', { user: req.user });
 });

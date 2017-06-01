@@ -16,8 +16,12 @@
     <title>eatBetter</title>
   </head>
 
+<<<<<<< HEAD
   <body>
               <header>
+=======
+  <title>EpikEats</title>
+>>>>>>> 665cc9cfb12837ac0313718ac28559e47a7dba50
 
                 <nav class="navbar navbar-inverse">
                   <div class="container-fluid">
@@ -32,6 +36,7 @@
                       <a class="navbar-brand" href="#">Brand</a>
                     </div>
 
+<<<<<<< HEAD
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                       <ul class="nav navbar-nav">
@@ -60,6 +65,41 @@
 
       <h1>eatBetter</h1>
         <h3>Search for food better so you can eat better</h3>
+=======
+<body>
+  <div class="container-fluid">
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <a href="#" class="navbar-brand navbar-left" style=color: black>EpikEats</a>
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" style="color: black" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+      </button>
+    </div>
+    <div class="navbar-collapse collapse">
+      <ul class="nav navbar-nav navbar-right" style="border-right-width: 20px;margin-right: 30px;">
+        <% if(user){ %>
+          Hello
+          <%= user.fb.firstName  %>
+        <li><a class="btn btn-default logout" href="/logout" role="button"> Logout</a></li>
+          <% } else {  %>
+        <li><a class="btn btn-default signup" href="/login/facebook" role="button">Login with Facebook</a></li>
+          <% } %>
+      </ul>
+    </div>
+</div>
+</nav>
+<header class="header">
+  <!--main container-->
+  <div class="container-fluid">
+    <!--**********************HEADER ROW***********************-->
+    <div class="row headerRow">
+      <div class="col-md-3 hamburgerCol">
+      </div>
+      <div class="col-md-6 logoTaglineCol" style="margin-top: 60px;">
+        <h1 class="center-logo" align="center" style="padding-top: 40px; top: 100px; margin-top: 100px; right: 0px; left: 0px;"> EpikEats </h1>
+        <center>
+          <p class="tagline" style="padding-top: 100px;">Write, review and share the menu.</p>
+        </center>
+>>>>>>> 665cc9cfb12837ac0313718ac28559e47a7dba50
       </div>
     </div>
 
@@ -80,7 +120,16 @@
       <% include results.ejs %>
     </div>
   </div>
+<<<<<<< HEAD
 <hr>
 <footer><p>Copyright 2017 etc...</p></footer>
   </body>
+=======
+    <!--**********************FOOTER ROW***********************-->
+  <footer class="navbar navbar-default navbar-fixed-bottom">
+    <p class="text-center"> Copyright 2017 </p>
+  </footer>
+</body>
+
+>>>>>>> 665cc9cfb12837ac0313718ac28559e47a7dba50
 </html>

@@ -61,32 +61,23 @@
     </div>
   </div>
 </form>
-<!--********************MOST RECENT ROW********************-->
-<div class="row mostRecentRow scroll" style="top: 0px;bottom: 0px;height: 600px; right: 18%;">
-      <div class="col-md-8 col-md-offset-4 mostRecentCol">
-          <% for (var i = 0; i < 10; i++) { %>
-            <div class="thumbnail" id=<%= results[i].id%> >
-              <div class="card mb-3">
-                <img class="card-img-top center-block" src= <%= results[i].image_url %> style="width:60%; height:60%;"  alt="Card image cap">
-                <div class="card-block center-block">
-                  <h4 class="card-title"> <%= results[i].name %> </h4>
-                  <p class="card-text">YELP's Rating: <%= results[i].rating %> </p>
-                  <p class="card-text"><small class="text-muted"><a href= <%= results[i].url %> ></a></small></p>
-                  <form action="/restaurant/<%= results[i].id %>" method="GET">
-                    <input type="submit" class="btn btn-primary center-block" value="Menu">
-                  </form>
-                </div>
-              </div>
-            </div>
-            <% } %>
+
+<!--********************MENU ROW********************-->
+    <div class="row menuRow">
+      <div class="col-md-4 col-md-offset-4 menuCol" style="margin-top: 250px;">
+        <div class="menuColTR"><div class="menuColTL"><div class="menuColBR"><div class="menuColBL">
+          <p class="menuTitle">Menu</p>
+          <center><p>place items cards here</p></center>
+        </div></div></div></div>
       </div>
-    <!--closes mostRecentRow-->
+    <!--closes menuRow-->
     </div>
-<!--**********************FOOTER ROW***********************-->
-<footer class="navbar navbar-default navbar-fixed-bottom">
-  <p class="text-muted" align="center"> Copyright 2017 </p>
-</footer>
-<!--*******************************************************-->
-  <!--closes main container-->
-</body>
+    <!--**********************FOOTER ROW***********************-->
+    <footer class="navbar navbar-default navbar-fixed-bottom">
+      <p class="text-muted" align="center"> Copyright 2017 </p>
+    </footer>
+    <!--*******************************************************-->
+      <!--closes main container-->
+    </body>
+
 </html>
