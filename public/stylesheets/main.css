@@ -161,6 +161,8 @@ h4 {
 .card-block {
   border-style: double;
   width: 60%;
+  background-color: rgba(0, 0, 0, .7);
+
 }
 
 .searchbarRow {
