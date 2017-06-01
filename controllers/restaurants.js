@@ -65,15 +65,14 @@ function searchYelp(req,res){
 }
 
 
-// function changeRestaurantRating (req, res) {
-//   var restaurantName = req.params.name;
-//
-//   db.Restaurant.find(restaurantName, function(err, restaurantFound){
-//     if(err){console.log("There is no restaurant by that name, please search again")};
-//     var foundRestaurant = restaurantFound;
-//   })
-//
-// }
+function getOneRestaurant (req, res) {
+  var restaurantName = req.params.id;
+  db.Restaurant.findOne(restaurantName, function(err, restaurantFound){
+    if(err){console.log("There is no restaurant by that name, please search again")};
+    res.json(restaurantFound);
+  });
+
+}
 
 
 
@@ -81,5 +80,6 @@ function searchYelp(req,res){
 
 
 module.exports = {
-  searchYelp: searchYelp
+  searchYelp: searchYelp,
+  getOneRestaurant: getOneRestaurant
 }

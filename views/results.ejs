@@ -105,6 +105,9 @@
                   <h4 class="card-title"> <%= results[i].name %> </h4>
                   <p class="card-text">YELP's Rating: <%= results[i].rating %> </p>
                   <p class="card-text"><small class="text-muted"><a href= <%= results[i].url %> ></a></small></p>
+                  <form action="/restaurant/<%= results[i].id %>" method="GET">
+                    <input type="submit" class="btn btn-primary">
+                  </form>
                 </div>
               </div>
             </div>

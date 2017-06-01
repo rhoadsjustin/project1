@@ -19,8 +19,9 @@ router.route('/search')
 
   .get(restaurantsController.searchYelp);
 
-router.route('/restaurants/:name')
-  .get(menusController.getMenu)
+router.route('/restaurants/:id')
+
+  .get(restaurantsController.getOneRestaurant)
 
   .post(isAuthenticated, menusController.createItem)
 
