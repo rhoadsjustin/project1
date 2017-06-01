@@ -7,21 +7,22 @@ function createMenu(req, res) {
 // });
 
   db.Restaurant.findOne({name: req.body.restaurant}, function (err, restaurant){
-    if(err) {
-      return console.log(err);
-    }
-    db.Menu.create({name : req.body.name}, function(err, newMenu){
       if(err) {
         return console.log(err);
       }
-      resaturant.menu = newMenu;
-      restaurant.save(function(err, finalRestaurant){
-        if(error){
-          res.json({message: 'Could not create menu:' + error});
+      db.Menu.create({name : req.body.name}, function(err, newMenu){
+        if(err) {
+          return console.log(err);
         }
-        res.redirect('/menu');
+        restaurant.menu = newMenu;
+        restaurant.save(function(err, finalRestaurant){
+          if(error){
+            res.json({message: 'Could not create menu:' + error});
+          }
+          // res.redirect('/menu');
+          console.log("res redirect");
+        });
       });
-    });
     });
 
   }
@@ -66,9 +67,10 @@ function deleteItem(req, res){
 };
 
 function getMenu(req, res){
-  db.Menu.findOne({name: req.params.name}, function(err, menu) {
+  db.Menu.findOne({name: req.name}, function(err, menu) {
+    createMenu();
     res.render('restaurant');
-  })
+  });
 }
 
 module.exports = {
