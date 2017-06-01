@@ -126,6 +126,10 @@ h3 {
   left: 320px;
 }
 
+h4 {
+  color: black;
+}
+
 .row {
   position: relative;
   bottom: 225px;
