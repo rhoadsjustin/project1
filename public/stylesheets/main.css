@@ -60,22 +60,6 @@ body {
     opacity: 0.7;
 }
 
-
-.searchbar {
-	color: black;
-  font-size: 24px;
-	text-align: center;
-	cursor: pointer;
-	display: block;
-  height: 48px;
-  border-radius: 10px;
-	width: 120%;
-	word-spacing: 0px;
-  margin-top: 110px;
-  opacity: 0.9;
-
-}
-
 .toggleButtons {
   margin-top: 42px;
   opacity: 0.7;
@@ -95,19 +79,28 @@ body {
 
 .copyright {
   margin-top: 16px;
-  color: black;
+  color: white;
   font-size: 20px;
 }
 
-#results {
+.results {
   position: relative;
   left: 255px;
 }
 
-#searchBar {
-  position: relative;
-  left: 375px;
-  display: inline-flex;
+.searchbar {
+	color: black;
+  font-size: 24px;
+	text-align: center;
+	cursor: pointer;
+	display: block;
+  height: 48px;
+  border-radius: 10px;
+	width: 120%;
+	word-spacing: 0px;
+  margin-top: 110px;
+  opacity: 0.9;
+
 }
 
 .logBtns {
