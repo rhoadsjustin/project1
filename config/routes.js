@@ -19,7 +19,7 @@ router.route('/search')
 
   .get(restaurantsController.searchYelp);
 
-router.route('/restaurants/:id')
+router.route('/restaurant/:id')
 
   .get(restaurantsController.getOneRestaurant)
 

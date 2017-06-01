@@ -1,11 +1,11 @@
 var passport = require('passport');
 var expressSession = require('express-session');
+var db = require('../models');
 
 
 
 function searchYelp(req,res){
   var yelp = require('yelp-fusion');
-  var db = require('../models');
   console.log(req.query.q);
 
   var clientId = process.env.YELP_CLIENT_ID;
@@ -67,7 +67,8 @@ function searchYelp(req,res){
 
 function getOneRestaurant (req, res) {
   var restaurantName = req.params.id;
-  db.Restaurant.findOne(restaurantName, function(err, restaurantFound){
+  console.log(restaurantName);
+  db.Restaurant.findOne({ _id: restaurantName}, function(err, restaurantFound){
     if(err){console.log("There is no restaurant by that name, please search again")};
     res.json(restaurantFound);
   });
