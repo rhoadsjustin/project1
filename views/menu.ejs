@@ -54,12 +54,13 @@
       <div class="col-md-4 col-md-offset-4 menuCol" style="margin-top: 350px;">
         <div class="menuColTR"><div class="menuColTL"><div class="menuColBR"><div class="menuColBL">
           <p class="menuTitle"><%= restaurant.name %>'s Menu</p>
-          <center>
+          <center> <% if(user) { %>
           <form id="newItem">
             <input type="text" class="form-control" name="newItem" placeholder="New Menu Item Here">
             <input type="hidden" name="restaurant-Id" value="<%= restaurant.id %>">
             <input type="submit" class="btn btn-default" >
           </form>
+          <% } %>
           <div id='results' class="scroll2">
               <% restaurant.menuItems.forEach(function(name){ %>
                 <ul class="list-group">
