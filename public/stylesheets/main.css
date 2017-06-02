@@ -3,6 +3,13 @@ body {
   background-size: cover;
   font-family: 'Open Sans', sans-serif;
   color: white;
+  padding: 0;
+}
+
+.blarf {
+  background-color: rgba(0, 0, 0, .5);
+  height: 100vh;
+  width: 100vw;
 }
 
 .navbar {
@@ -25,7 +32,8 @@ body {
 .tagline {
   margin-top: 6px;
   font-size: 24px;
-
+  color: white;
+  text-shadow: 0px 4px 16px black;
 }
 
 .login {
@@ -59,24 +67,7 @@ body {
     opacity: 0.7;
 }
 
-
-.searchbar {
-	color: black;
-  font-size: 24px;
-	text-align: center;
-	cursor: pointer;
-	display: block;
-  height: 48px;
-  border-radius: 10px;
-	width: 100%;
-	word-spacing: 0px;
-  margin-top: 110px;
-  opacity: 0.9;
-
-}
-
 .toggleButtons {
-  margin-top: 42px;
   opacity: 0.7;
 
 }
@@ -94,19 +85,28 @@ body {
 
 .copyright {
   margin-top: 16px;
-  color: black;
+  color: white;
   font-size: 20px;
 }
 
-#results {
+.results {
   position: relative;
   left: 255px;
 }
 
-#searchBar {
-  position: relative;
-  left: 375px;
-  display: inline-flex;
+.searchbar {
+	color: black;
+  font-size: 24px;
+	text-align: center;
+	display: block;
+  height: 48px;
+  border-radius: 10px;
+	width: 120%;
+	word-spacing: 0px;
+  margin-top: 110px;
+  margin-bottom: 42px;
+  opacity: 0.9;
+
 }
 
 .logBtns {
@@ -116,7 +116,7 @@ body {
 
 footer {
   position: relative;
-  left: 550px;
+  margin: 0;
 }
 
 
@@ -162,6 +162,7 @@ h4 {
   background-color: transparent;
   opacity: 1;
   border-style: none;
+<<<<<<< HEAD
 }
 
 .card-text, .card-title {
@@ -177,6 +178,23 @@ h4 {
   border-top-left-radius: 10px;
 }
 
+=======
+}
+
+.card-text, .card-title {
+  color: white;
+  text-align: center;
+}
+
+.card-img-top {
+  border-top: double;
+  border-left: double;
+  border-right: double;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+>>>>>>> 1ac1cdb8693fd42544092a260fe51bb797595940
 .card-block {
   border: double;
   width: 60%;
