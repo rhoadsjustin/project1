@@ -1,39 +1,5 @@
 var db = require('../models');
 
-
-// POST new Menu
-// function createMenu(req, res) {
-//   // var newMenu = new db.Menu({
-//   var newMenu = req.params.name
-//   // });
-//
-//   db.Restaurant.findOne({name: req.params.name}, function (err, restaurant){
-//     if(err) {
-//       return console.log(err);
-//     }
-//     db.Menu.create({name : newMenu}, function(err, createdMenu){
-//       if(err) {
-//         return console.log(err);
-//       }
-//       restaurant.menu = createdMenu;
-//       restaurant.save(function(err, finalRestaurant){
-//         if(err){
-//           res.json({message: 'Could not create menu:' + error});
-//         }
-//         res.render('menu');
-//       });
-//     });
-//   });
-
-
-// function showItems(req, res){
-//   db.Menu.find({})
-//   .exec(function(err, items){
-//     if(err){return console.log(err);}
-//     res.render('menu.ejs');
-//   })
-// }
-
 function createItem(req, res){
     var restaurantid = req.params.id;
     console.log("this is the " + restaurantid);
@@ -54,7 +20,6 @@ function createItem(req, res){
           });
 
 }
-
 
 
 function deleteItem(req, res){
