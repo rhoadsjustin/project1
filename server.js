@@ -10,7 +10,7 @@ var flash          = require('connect-flash');
 var mongoose = require('mongoose');
 
 
-mongoose.connect('mongodb://localhost:27017/eatbetter');
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/eatbetter');
 
 var passport = require('passport');
 var expressSession = require('express-session');
@@ -46,11 +46,6 @@ app.get('/', function home (req, res) {
 });
 
 
-app.listen(3000, function(){
+app.listen(process.env.PORT || 3000, function(){
   console.log('server 3000 is on!');
-});
-
-
-app.get('/menu', function menu (req, res) {
-  res.render('menu', { user: req.user });
 });

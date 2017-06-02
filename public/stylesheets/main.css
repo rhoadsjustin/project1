@@ -162,6 +162,11 @@ h4 {
   overflow-y: auto;
 }
 
+.scroll2 {
+  height: 300px;
+  overflow-y: auto;
+}
+
 ::-webkit-scrollbar {
   display: none;
 }
@@ -170,6 +175,22 @@ h4 {
   background-color: transparent;
   opacity: 1;
   border-style: none;
+}
+
+.card-text, .card-title {
+  color: white;
+  text-align: center;
+}
+
+.card-img-top {
+  border-top: double;
+  border-left: double;
+  border-right: double;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+=======
 }
 
 .card-text, .card-title {
@@ -327,4 +348,17 @@ h4 {
   text-align: center;
   font-size: 60px;
   margin-top: 10px;
+}
+
+h5 {
+  color: black;
+  font-size: 2em;
+}
+li {
+  color: black;
+  font-size: 12px;
+}
+
+.btn-danger {
+  font-size: 7px;
 }
