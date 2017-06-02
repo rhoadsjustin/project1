@@ -3,6 +3,13 @@ body {
   background-size: cover;
   font-family: 'Open Sans', sans-serif;
   color: white;
+  padding: 0;
+}
+
+.blarf {
+  background-color: rgba(0, 0, 0, .5);
+  height: 100vh;
+  width: 100vw;
 }
 
 .navbar {
@@ -61,7 +68,6 @@ body {
 }
 
 .toggleButtons {
-  margin-top: 42px;
   opacity: 0.7;
 
 }
@@ -92,13 +98,13 @@ body {
 	color: black;
   font-size: 24px;
 	text-align: center;
-	cursor: pointer;
 	display: block;
   height: 48px;
   border-radius: 10px;
 	width: 120%;
 	word-spacing: 0px;
   margin-top: 110px;
+  margin-bottom: 42px;
   opacity: 0.9;
 
 }
@@ -110,7 +116,7 @@ body {
 
 footer {
   position: relative;
-  left: 550px;
+  margin: 0;
 }
 
 
@@ -156,6 +162,7 @@ h4 {
   background-color: transparent;
   opacity: 1;
   border-style: none;
+<<<<<<< HEAD
 }
 
 .card-text, .card-title {
@@ -171,6 +178,23 @@ h4 {
   border-top-left-radius: 10px;
 }
 
+=======
+}
+
+.card-text, .card-title {
+  color: white;
+  text-align: center;
+}
+
+.card-img-top {
+  border-top: double;
+  border-left: double;
+  border-right: double;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+>>>>>>> 1ac1cdb8693fd42544092a260fe51bb797595940
 .card-block {
   border: double;
   width: 60%;
@@ -316,4 +340,13 @@ h4 {
   text-align: center;
   font-size: 60px;
   margin-top: 10px;
+}
+
+h5 {
+  color: black;
+  font-size: 2em;
+}
+li {
+  color: black;
+  font-size: 12px;
 }

@@ -32,11 +32,17 @@ function searchYelp(req,res){
 
             db.Restaurant.create(results, function(err, madeRests){
               madeRests.forEach( function(result, index){
+                // db.Menu.create({name: result.name}, function(err, succ){
+                //   if(err){return console.log(err)}
+                //   result.menu = succ;
+                //   result.save();
+                // });
                 result.term = searchRequest.term;
                 result.save(function(err, succ){
                   if(index === madeRests.length - 1){
                     console.log("\n ADDED TO DB THE SEARCH TERM: " , searchRequest.term);
                     db.Restaurant.find({term: searchRequest.term}, function(err, succ){
+
                       res.render('results', {results: succ, user: req.user});
                     });
                   }
@@ -69,8 +75,9 @@ function getOneRestaurant (req, res) {
   var restaurantName = req.params.id;
   console.log(restaurantName);
   db.Restaurant.findOne({ _id: restaurantName}, function(err, restaurantFound){
+    console.log(restaurantFound);
     if(err){console.log("There is no restaurant by that name, please search again")};
-    res.json(restaurantFound);
+    res.render('menu', {restaurant: restaurantFound, user: req.user});
   });
 
 }

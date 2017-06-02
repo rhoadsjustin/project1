@@ -67,8 +67,28 @@
     <div class="row menuRow">
       <div class="col-md-4 col-md-offset-4 menuCol" style="margin-top: 250px;">
         <div class="menuColTR"><div class="menuColTL"><div class="menuColBR"><div class="menuColBL">
-          <p class="menuTitle">Menu</p>
-          <center><p>place items cards here</p></center>
+          <p class="menuTitle"><%= restaurant.name %>'s Menu</p>
+          <center>
+          <form id="newItem">
+            <input type="text" class="form-control" name="newItem" placeholder="New Menu Item Here">
+            <input type="hidden" name="restaurant-Id" value="<%= restaurant.id %>">
+            <input type="submit" class="btn btn-default" >
+          </form>
+          <div id='results'>
+              <% restaurant.menuItems.forEach(function(name){ %>
+                <ul class="list-group">
+                  <li class="list-group-item"><%=name %><span>
+                  <form id="delteItem">
+                    <input type="hidden" name="restaurant-Id" value="<%= restaurant.id %>">
+                    <input type="hidden" name="item-Id" value="<%= name.id %>">
+                    <input type="submit" class="btn btn-danger" value="delete">
+                  </form></span>
+                </li>
+              </ul>
+                  <%  }) %>
+          </div>
+          </center>
+
         </div></div></div></div>
       </div>
     <!--closes menuRow-->
