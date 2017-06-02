@@ -77,12 +77,14 @@
           <div id='results'>
               <% restaurant.menuItems.forEach(function(name){ %>
                 <ul class="list-group">
-                  <li class="list-group-item"><%=name %><span>
-                  <form id="delteItem">
+                  <li class="list-group-item"><%=name %>
+                    <p class="pull-left">Menu Item Rating</p><hr>
+                            <div id="stars" class="starrr pull-left"></div>
+                  <form id="delteItem pull-right">
                     <input type="hidden" name="restaurant-Id" value="<%= restaurant.id %>">
                     <input type="hidden" name="item-Id" value="<%= name.id %>">
-                    <input type="submit" class="btn btn-danger" value="delete">
-                  </form></span>
+                    <input type="submit" class="btn btn-danger" value="delete item">
+                  </form>
                 </li>
               </ul>
                   <%  }) %>

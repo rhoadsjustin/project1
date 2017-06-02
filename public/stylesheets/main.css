@@ -347,3 +347,7 @@ li {
   color: black;
   font-size: 12px;
 }
+
+.btn-danger {
+  font-size: 7px;
+}
