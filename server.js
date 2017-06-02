@@ -10,7 +10,7 @@ var flash          = require('connect-flash');
 var mongoose = require('mongoose');
 
 
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/eatbetter');
+mongoose.connect('mongodb://heroku_611f71fk:gutenlqb9n5nr4ih2ct745cum3@ds161551.mlab.com:61551/heroku_611f71fk');
 
 var passport = require('passport');
 var expressSession = require('express-session');
