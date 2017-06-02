@@ -62,18 +62,18 @@
   </div>
 </form>
 <!--********************MOST RECENT ROW********************-->
-<div class="row mostRecentRow scroll" style="top: 0px;bottom: 0px;height: 600px;">
-      <div class="col-md-4 col-md-offset-4 mostRecentCol">
+<div class="row mostRecentRow scroll" style="top: 0px;bottom: 0px;height: 600px; right: 18%;">
+      <div class="col-md-8 col-md-offset-4 mostRecentCol">
           <% for (var i = 0; i < 10; i++) { %>
             <div class="thumbnail" id=<%= results[i].id%> >
               <div class="card mb-3">
-                <img class="card-img-top" src= <%= results[i].image_url %> style="width:60%; height:60%;"  alt="Card image cap">
-                <div class="card-block">
+                <img class="card-img-top center-block" src= <%= results[i].image_url %> style="width:60%; height:60%;"  alt="Card image cap">
+                <div class="card-block center-block">
                   <h4 class="card-title"> <%= results[i].name %> </h4>
-                  <p class="card-text">YELP's Rating: <%= results[i].rating %> </p>
+                  <p class="card-text">YELP Rating: <%= results[i].rating %> </p>
                   <p class="card-text"><small class="text-muted"><a href= <%= results[i].url %> ></a></small></p>
                   <form action="/restaurant/<%= results[i].id %>" method="GET">
-                    <input type="submit" class="btn btn-primary">
+                    <input type="submit" class="btn btn-primary center-block menuBtn" value="Menu">
                   </form>
                 </div>
               </div>
