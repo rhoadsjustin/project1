@@ -15,7 +15,7 @@ body {
 .navbar {
   background-color: #097054;
   padding: 21px;
-  height: 100px;
+  height: 75px;
 }
 
 .headerRow {
@@ -114,7 +114,6 @@ body {
   margin-top: 110px;
   margin-bottom: 42px;
   opacity: 0.9;
-
 }
 
 .logBtns {
