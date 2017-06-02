@@ -14,11 +14,14 @@ body {
 
 .navbar {
   background-color: #097054;
+  padding: 21px;
+  height: 100px;
 }
 
 .headerRow {
   background-color: #097054;
   height: 168px;
+  margin-top: 42px;
 }
 
 .center-logo {
@@ -36,53 +39,58 @@ body {
   text-shadow: 0px 4px 16px black;
 }
 
-.login {
-    background-color: #097054;
-    border: none;
-    color: black;
+.navbar-nav>li>a.signup {
+  background-color: rgba(255, 255, 255, 0);
+  border: 1px solid white;
+  border-radius: 5px;
+  color: white;
+  padding: 8px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin-right: 42px;
+}
+
+.navbar-nav>li>a.signup:hover {
+    background-color: white;
+    color: black
+}
+
+.navbar-nav>li>a.logout {
+    background-color: rgba(255, 255, 255, 0);
+    border: 1px solid white;
+    border-radius: 5px;
+    color: white;
     padding: 8px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 20px;
-    margin-right: 10px;
+    margin-right: 42px;
 }
 
-.signup {
+.navbar-nav>li>a.logout:hover {
     background-color: white;
-    border-radius: 14px;
-    color: black;
-    display: inline-block;
-    font-size: 12px;
-    opacity: 0.7;
-}
-
-.logout {
-    background-color: white;
-    border-radius: 14px;
-    color: black;
-    text-align: center;
-    display: inline-block;
-    font-size: 12px;
-    opacity: 0.7;
-}
-
-.toggleButtons {
-  opacity: 0.7;
-
+    color: black
 }
 
 .restaurant {
-    background-color: white;
-    border-radius: 10px;
-    color: black;
+    background-color: rgba(9, 112, 84, .5);
+    border-radius: 0px;
+    color: white;
     padding: 3px 12px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 20px;
+    margin-right: 10px;
+    margin-left: 10px;
 }
 
+.restaurant:hover {
+  background-color: rgba(9, 112, 84, .8);
+}
 .copyright {
   margin-top: 16px;
   color: white;

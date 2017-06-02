@@ -33,16 +33,16 @@
     <div class="container-fluid">
       <!--**********************NAVBAR***********************-->
       <nav class="navbar navbar-default navbar-fixed-top">
-        <a href="#" class="navbar-brand navbar-left" style=color: black>epikEats</a>
+        <a href="#" class="navbar-brand navbar-left">epikEats</a>
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" style="color: black" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
 </button>
         </div>
         <div class="navbar-collapse collapse">
-          <ul class="nav navbar-nav navbar-right" style="border-right-width: 20px;margin-right: 30px;">
+          <ul class="nav navbar-nav navbar-right">
             <% if(user){ %>
               <li><a class="btn btn-default logout" href="/logout" role="button"> Logout</a></li>
-              Hello
+              <br>Hello,
               <%= user.fb.firstName  %>
                 <% } else {  %>
                   <li><a class="btn btn-default signup" href="/login/facebook" role="button">Login with Facebook</a></li>
