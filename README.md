@@ -1,5 +1,5 @@
 # Project1 - epikEats
-An app that allows users to create, store, and write reviews on particular items at a restaurant
+An app that allows users to create, store, and give ratings on particular items at a restaurant
 
 Link to project hosted on Heroku
 
@@ -18,7 +18,7 @@ Technologies Used
 Existing Features
 * Users can conduct local searches by restaurant or food item to populate results in a list
 * Authenticated users can create and add menu items
-* Authenticated users can write reviews on menu items
+* Authenticated users can add ratings on menu items
 
 
 Planned Features
