@@ -1,6 +1,8 @@
 var passport = require('passport');
 require("../config/passport")(passport)
 
+
+// FACEBOOK FUNCTIONS
 function getLogin(req, res){
   var loginStrategy = passport.authenticate('facebook');
   return loginStrategy(req, res)

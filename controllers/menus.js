@@ -1,5 +1,6 @@
 var db = require('../models');
 
+// CREATE ITEM
 function createItem(req, res){
     var restaurantid = req.params.id;
     console.log("this is the " + restaurantid);
@@ -21,7 +22,7 @@ function createItem(req, res){
 
 }
 
-
+// DELETE ITEM
 function deleteItem(req, res){
   var restaurantId = req.params.id;
   var itemId = req.body.id;
@@ -34,8 +35,6 @@ function deleteItem(req, res){
     res.render('menu', {restaurant: foundRestaurant, user: req.user});
   })
 }
-
-
 
 module.exports = {
   createItem: createItem,

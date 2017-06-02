@@ -35,8 +35,7 @@
       <nav class="navbar navbar-default navbar-fixed-top">
         <a href="#" class="navbar-brand navbar-left">epikEats</a>
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-</button>
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"></button>
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
@@ -44,15 +43,16 @@
               <li><a class="btn btn-default logout" href="/logout" role="button"> Logout</a></li>
               <br>Hello,
               <%= user.fb.firstName  %>
-                <% } else {  %>
-                  <li><a class="btn btn-default signup" href="/login/facebook" role="button">Login with Facebook</a></li>
-                  <% } %>
+              <% } else {  %>
+              <li><a class="btn btn-default signup" href="/login/facebook" role="button">Login with Facebook</a></li>
+              <% } %>
           </ul>
         </div>
     </div>
     </nav>
+    <!-- END OF NAV BAR -->
+    <!-- HEADER ROW -->
     <div class="blarf">
-    <!--**********************HEADER ROW***********************-->
     <div class="row headerRow">
       <div class="col-xs-3 hamburgerCol">
       </div>
@@ -62,15 +62,14 @@
           <p class="tagline animated fadeInRightBig" style="padding-top: 100px;">Write, review and share the menu.</p>
         </center>
       </div>
-      <!--closes headerRow-->
     </div>
-    <!--*********************SEARCHBAR ROW*********************-->
+    <!-- SEARCH BAR ROW -->
     <form action="/search" method="GET">
       <div class="row searchbarRow animated fadeInRightBig">
         <div class="col-xs-6 col-xs-offset-3 searchbarCol">
           <input type=search class="searchbar" results=5 placeholder="Search: tacos, pad thai, etc." autosave=5 name="q">
         </div>
-        <!--******************TOGGLE BUTTONS ROW*******************-->
+        <!-- BUTTONS -->
         <div class="row toggleButtonsRow">
           <div class="col-xs-4 col-xs-offset-4 toggleButtonsCol" style="top: 200px;">
             <center class="toggleButtons">
@@ -78,11 +77,10 @@
               <input type="submit" class="restaurant" value="restaurant">
             </center>
           </div>
-          <!--closes toggleButtonsRow-->
         </div>
     </form>
     </div>
-  <!--**********************FOOTER ROW***********************-->
+    <!-- FOOTER ROW -->
   <footer class="navbar navbar-default navbar-fixed-bottom">
     <p class="text-center copyright"> Copyright © 2017 </p>
   </footer>

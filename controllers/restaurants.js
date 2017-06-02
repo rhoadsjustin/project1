@@ -3,7 +3,7 @@ var expressSession = require('express-session');
 var db = require('../models');
 
 
-
+// YELP FUNCTION
 function searchYelp(req,res){
   var yelp = require('yelp-fusion');
   console.log(req.query.q);
@@ -65,11 +65,6 @@ function getOneRestaurant (req, res) {
   });
 
 }
-
-
-
-
-
 
 module.exports = {
   searchYelp: searchYelp,

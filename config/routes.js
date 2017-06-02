@@ -26,14 +26,8 @@ router.route('/restaurant/:id')
 router.route('/restaurant/:id/item')
   .post(menusController.createItem);
 
-  router.route('/restaurant/:id/item/:id')
+router.route('/restaurant/:id/item/:id')
   .delete(isAuthenticated, menusController.deleteItem);
-// router.route('/menu/:name')
-//
-//   .post(isAuthenticated, menusController.createMenu);
-
-
-
 
 router.route('/login/facebook').get( usersController.getLogin);
 router.route('/login/facebook/callback').get(usersController.getCallback);

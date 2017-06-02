@@ -1,6 +1,8 @@
 console.log("this is working");
 
 $( document ).ready(function() {
+
+  // POST new Item to database
     $('#newItem').on('submit', function(e){
       e.preventDefault();
       var restId = $('input[type=hidden][name=restaurant-Id]').val();
@@ -19,6 +21,7 @@ $( document ).ready(function() {
 
     });
 
+    // DELETE item from database
     $('#deleteItem').on('submit', function(e){
       e.preventDefault();
       var restId = $('input[type=hidden][name=restaurant-Id]').val();
