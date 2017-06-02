@@ -17,7 +17,7 @@ module.exports = function(passport){
   passport.use('facebook', new FacebookStrategy({
       clientID        : process.env.FACEBOOK_API_KEY,
       clientSecret    : process.env.FACEBOOK_API_SECRET,
-      callbackURL     : 'http://localhost:3000/login/facebook/callback',
+      callbackURL     : 'http://epikeats.herokuapp.com/login/facebook/callback',
       enableProof			: true,
       profileFields   : ['name']
   },
