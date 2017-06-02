@@ -74,7 +74,7 @@
             <input type="hidden" name="restaurant-Id" value="<%= restaurant.id %>">
             <input type="submit" class="btn btn-default" >
           </form>
-          <div id='results'>
+          <div id='results' class="scroll2">
               <% restaurant.menuItems.forEach(function(name){ %>
                 <ul class="list-group">
                   <li class="list-group-item"><%=name %>

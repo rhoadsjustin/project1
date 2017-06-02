@@ -154,6 +154,11 @@ h4 {
   overflow-y: auto;
 }
 
+.scroll2 {
+  height: 300px;
+  overflow-y: auto;
+}
+
 ::-webkit-scrollbar {
   display: none;
 }
@@ -162,7 +167,6 @@ h4 {
   background-color: transparent;
   opacity: 1;
   border-style: none;
-<<<<<<< HEAD
 }
 
 .card-text, .card-title {
