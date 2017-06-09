@@ -9,9 +9,10 @@ var flash          = require('connect-flash');
 
 var mongoose = require('mongoose');
 
-
+//TODO: You're also still connecting to a locally hosted database in your models/index.js folder. Be careful.
 mongoose.connect('mongodb://heroku_611f71fk:gutenlqb9n5nr4ih2ct745cum3@ds161551.mlab.com:61551/heroku_611f71fk');
 
+//TODO: Move these requirements up with their friends and match the spacing convention
 var passport = require('passport');
 var expressSession = require('express-session');
 app.use(expressSession({secret: 'Secret food'}));
@@ -34,7 +35,7 @@ app.use(express.static(__dirname + '/public'));
 
 // Routes
 
-
+//TODO: Move these requirements up with their friends and match the spacing convention
 require("./config/passport")(passport)
 var routes = require('./config/routes');
 

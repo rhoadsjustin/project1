@@ -1,3 +1,4 @@
+// TODO: If you are going to use this method of comma chaining dependencies, make sure you mirror it everywhere else (i.e. server.js)
 var express = require('express'),
     router = express.Router(),
     bodyParser = require('body-parser'), //parses information from POST
