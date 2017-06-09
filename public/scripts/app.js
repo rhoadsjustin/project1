@@ -7,7 +7,9 @@ $( document ).ready(function() {
       e.preventDefault();
       var restId = $('input[type=hidden][name=restaurant-Id]').val();
       var newItem = $('input[type=text][name=newItem]').val();
+      //TODO: Remove console logging from deployment versions
       console.log(restId + newItem);
+      //TODO: Include error handling
       $.ajax({
         method: "POST",
         url: `/restaurant/${restId}/item`,
@@ -16,6 +18,8 @@ $( document ).ready(function() {
 
       })
       function onSuccess(json){
+        //TODO: Remove console logging from deployment versions
+        //TODO: Consider a flash message to let your user know it worked
         console.log("YOU'VE added it successfully!");
       }
 
@@ -26,7 +30,9 @@ $( document ).ready(function() {
       e.preventDefault();
       var restId = $('input[type=hidden][name=restaurant-Id]').val();
       var deleteItem = $('input[type=hidden][name=item-Id]').val();
+      //TODO: Remove console logging from deployment versions
       console.log(restId + deleteItem);
+      //TODO: Include error handling
       $.ajax({
         method: "DELETE",
         url: `/restaurant/${restId}/item/${deleteItem}`,
@@ -35,11 +41,19 @@ $( document ).ready(function() {
 
       })
       function deleteSuccess(json){
+        //TODO: Remove console logging from deployment versions
+        //TODO: Consider a flash message to let your user know it worked
         console.log("YOU'VE deleted it successfully!");
       }
 
     });
 
+// TODO: I'm glad you found a solution for your star rating system.
+    /* It's actually quite large. I'm convinced you can write your own and
+    make it much smaller and more efficient, given more time to develop.
+    Also it's considered best practices to give credit to the original
+    developer when it comes to larger code snippets such as this.
+    */
 //star rating widget code below
 var __slice = [].slice;
 

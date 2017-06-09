@@ -1,5 +1,6 @@
 var mongoose = require('mongoose');
 
+// TODO: I'm excited to see your Item model attached to your Restaurant model. This will make your page really stand out!
 var RestaurantSchema = mongoose.Schema({
   name: String,
   image_url: String,
